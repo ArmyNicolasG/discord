@@ -4,7 +4,7 @@ require('dotenv').config()
 const client = new Discord.Client()
 client.login(process.env.BOT_TOKEN)
 
-const prefix = "_"
+const prefix = "/"
 
 client.on('message', function(message){
     //Help command
@@ -21,9 +21,7 @@ client.on('message', function(message){
         let mensajeEnviar = spammer.join(' ')
 
         //ERROR !!!
-        if(numeroDeMensajes < 100 && message.member.roles.cache.some(role => role.name === 'Admin'))
-        // /ERROR !!!
-        {
+        if(numeroDeMensajes < 100 && message.member.roles.has('Admin')){
         for(let i = 0; i < numeroDeMensajes; i++){
             message.channel.send(mensajeEnviar)
         }
