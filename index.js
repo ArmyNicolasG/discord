@@ -44,4 +44,3 @@ client.on('message', function(message){
 })
 
 
-// Enviar al repositorio https://github.com/ArmyNicolasG/firstDiscordBot#firstdiscordbot
