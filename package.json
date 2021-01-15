@@ -1,0 +1,29 @@
+{
+  "name": "firstbot",
+  "version": "1.0.0",
+  "description": "este es el primer bot de prueba de nicolas",
+  "main": "bot/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "armynicolasg",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "discord": "^0.8.2",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArmyNicolasG/firstDiscordBot.git#firstdiscordbot"
+  },
+  "bugs": {
+    "url": "https://github.com/ArmyNicolasG/firstDiscordBot/issues"
+  },
+  "homepage": "https://github.com/ArmyNicolasG/firstDiscordBot/tree/firstdiscordbot#readme"
+}
