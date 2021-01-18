@@ -5,7 +5,10 @@ const client = new Discord.Client()
 client.login(process.env.BOT_TOKEN)
 
 const prefix = "/"
-
+client.on('ready', () => {
+    console.log('BOT WORKING!')
+    
+});
 client.on('message', function(message){
     //Help command
     if(message.content.startsWith(prefix + 'ayuda') || message.content.startsWith(prefix + 'help')){
@@ -20,15 +23,17 @@ client.on('message', function(message){
         let numeroDeMensajes = parseInt(spammer[spammer.length - 1])
         let mensajeEnviar = spammer.join(' ')
 
-        //ERROR !!!
-        if(numeroDeMensajes < 100 && message.member.roles.has('Admin')){
-        for(let i = 0; i < numeroDeMensajes; i++){
-            message.channel.send(mensajeEnviar)
+        if(numeroDeMensajes < 100 && message.author.roles(administrator)){
+            for(let i = 0; i < numeroDeMensajes; i++){
+                message.channel.send(mensajeEnviar)
+            }
+        } else{
+            message.reply('No se ha podido completar la acción')
         }
-    } else{
-        message.reply('No se ha podido ejecutar el comando, verifica que el número sea menor a 100 y/o tengas permisos de **Administrador**')
-    }
-        
+
+
+
+
     }
     else if(message.content.includes('rtx') || message.content.includes('3080') || message.content.includes('RTX') || message.content.includes('3090')){
         console.log("rtx on")
@@ -40,5 +45,6 @@ client.on('message', function(message){
         message.channel.send(mensaje)
     }
 })
+
 
 
