@@ -1,0 +1,1 @@
+2.0 Comandos funcionando (help, spam, say, client.on('ready'), desactivarBot)

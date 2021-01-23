@@ -1,3 +1,5 @@
+// Versión 2.0
+
 const Discord = require('discord.js')
 const config = require('./config.json')
 require('dotenv').config()

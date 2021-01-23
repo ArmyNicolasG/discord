@@ -1,3 +1,5 @@
+// Versión 2.0
+
 const Discord = require('discord.js')
 const config = require('./config.json')
 require('dotenv').config()
@@ -23,7 +25,7 @@ client.on('message', function(message){
         let numeroDeMensajes = parseInt(spammer[spammer.length - 1])
         let mensajeEnviar = spammer.join(' ')
 
-        if(numeroDeMensajes < 100 && message.user.hasPermission("Admin")){
+        if(numeroDeMensajes < 100 && message.member.hasPermission("Admin")){
             for(let i = 0; i < numeroDeMensajes; i++){
                 message.channel.send(mensajeEnviar)
             }
