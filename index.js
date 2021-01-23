@@ -1,4 +1,4 @@
-// Versión 2.0
+// Versión 2.1
 
 const Discord = require('discord.js')
 const config = require('./config.json')
@@ -23,6 +23,7 @@ client.on('message', function(message){
         let spammer = message.content.split(' ')
         spammer.shift()
         let numeroDeMensajes = parseInt(spammer[spammer.length - 1])
+        spammer.pop()
         let mensajeEnviar = spammer.join(' ')
 
         if(numeroDeMensajes < 100 && message.member.hasPermission("Admin")){

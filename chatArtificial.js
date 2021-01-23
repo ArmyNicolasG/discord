@@ -1,4 +1,4 @@
-// Versión 2.0
+// Versión 2.1
 
 const Discord = require('discord.js')
 const config = require('./config.json')
